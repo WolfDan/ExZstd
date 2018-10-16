@@ -1,6 +1,8 @@
 # ExZstd
 
-[zstd](https://github.com/facebook/zstd) library for Elixir, *not published yet*, same code as https://hex.pm/packages/zstd but "updated" to 1.3.5 and wrote in elixir
+[zstd](https://github.com/facebook/zstd) library for Elixir, *not published yet*
+
+It uses the Rust zstd binding to make cross system compilation easier (tried to do it native with the Makefile etc but I failed at making it work on windows 10 which is my main OS, the speed difference isn't noticiable)
 
 ## API so far
 
@@ -12,15 +14,15 @@
 
 # Benchmark
 
-Totally unrealiable, non-scientific benchmark `mix run bench/bench.exs` (*run on windows WSL mode*)
+Totally unrealiable, non-scientific benchmark `mix run bench/bench.exs` (*run on windows 10*)
 
 ```
 Operating System: Linux"
 CPU Information: Intel(R) Core(TM) i3-7100 CPU @ 3.90GHz
 Number of Available Cores: 4
 Available memory: 7.95 GB
-Elixir 1.7.2
-Erlang 21.0.5
+Elixir 1.7.3
+Erlang 21.1
 
 Benchmark suite executing with the following configuration:
 warmup: 2 s
@@ -35,12 +37,12 @@ Benchmarking compress speed...
 Benchmarking uncompress speed...
 
 Name                       ips        average  deviation         median         99th %
-compress speed        171.17 K        5.84 μs   ±346.07%           5 μs           9 μs
-uncompress speed       41.27 K       24.23 μs   ±108.62%          23 μs          44 μs
+uncompress speed      231.82 K        4.31 μs  ±15.59%           4.70 μs        4.70 μs
+compress speed        125.20 K        7.99 μs  ±6.25%            7.80 μs        9.40 μs
 
 Comparison:
-compress speed        171.17 K
-uncompress speed       41.27 K - 4.15x slower
+uncompress speed      231.82 K
+compress speed        125.20 K - 1.85x slower
 ```
 
 
