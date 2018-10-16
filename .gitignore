@@ -26,3 +26,4 @@ ex_zstd-*.tar
 .elixir_ls
 priv/*.so
 c_src/*.so
+/priv/
