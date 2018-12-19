@@ -2,7 +2,7 @@
 
 [zstd](https://github.com/facebook/zstd) library for Elixir, *not published yet*
 
-It uses the Rust zstd binding to make cross system compilation easier (tried to do it native with the Makefile etc but I failed at making it work on windows 10 which is my main OS, the speed difference isn't noticiable)
+It uses the Rust zstd binding to make cross system compilation easier (tried to do it native with the Makefile etc but I failed at making it work on windows 10 which is my main OS, the speed difference is virtually inexistent)
 
 ## API so far
 
