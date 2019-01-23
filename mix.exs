@@ -17,7 +17,7 @@ defmodule ExZstd.MixProject do
     [
       exzstd: [
         path: "native/exzstd",
-        mode: if(Mix.env() == :prod, do: :release, else: :debug)
+        mode: :release
       ]
     ]
   end
